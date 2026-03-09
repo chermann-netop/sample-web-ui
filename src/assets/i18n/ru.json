@@ -1,4 +1,4 @@
-{
+﻿{
   "about.cloudMode": {
     "description": "Заголовок для раздела «О нас» в облачном режиме",
     "value": "О наборе инструментов для управления устройствами Пример веб-интерфейса пользователя"
@@ -123,42 +123,6 @@
     "description": "Сообщение об использовании TLS",
     "value": "Используйте TLS."
   },
-  "addDevice.useCIRA": {
-    "description": "Флажок для использования соединения CIRA",
-    "value": "Использовать CIRA"
-  },
-  "addDevice.guid": {
-    "description": "Метка для поля GUID",
-    "value": "GUID"
-  },
-  "addDevice.enterGuid": {
-    "description": "Подсказка для ввода GUID",
-    "value": "Введите GUID"
-  },
-  "addDevice.mpsUsername": {
-    "description": "Метка для поля имени пользователя MPS",
-    "value": "Имя пользователя MPS"
-  },
-  "addDevice.mpsUsernameHint": {
-    "description": "Подсказка для поля имени пользователя MPS",
-    "value": "Имя пользователя MPS (по умолчанию: admin)"
-  },
-  "addDevice.mpsPassword": {
-    "description": "Метка для поля пароля MPS",
-    "value": "Пароль MPS"
-  },
-  "addDevice.mpsPasswordHint": {
-    "description": "Подсказка для поля пароля MPS",
-    "value": "Введите пароль MPS"
-  },
-  "addDevice.amtPassword": {
-    "description": "Метка для поля пароля AMT",
-    "value": "Пароль AMT"
-  },
-  "addDevice.amtPasswordHint": {
-    "description": "Подсказка для поля пароля AMT",
-    "value": "Введите пароль AMT"
-  },
   "alarm.errorAdding": {
     "description": "Ошибка при добавлении",
     "value": "Ошибка при добавлении событий тревоги"
@@ -170,10 +134,6 @@
   "alarm.errorRetrieve": {
     "description": "Ошибка при извлечении",
     "value": "Ошибка при получении событий тревоги"
-  },
-  "alarm.successAdding": {
-    "description": "Сообщение об успехе при добавлении будильника",
-    "value": "Будильник успешно создан"
   },
   "alarmService.addNew": {
     "description": "Текст кнопки для добавления нового будильника",
@@ -287,22 +247,6 @@
   "certificates.errorRetrievingCertificates": {
     "description": "Ошибка при получении информации о сертификате",
     "value": "Ошибка при получении информации о сертификате"
-  },
-  "certificates.certificateReferencedError": {
-    "description": "Ошибка, когда сертификат нельзя удалить, поскольку на него ссылаются профили",
-    "value": "Сертификат не может быть удален, поскольку в настоящее время на него ссылаются профили AMT. Сначала удалите ссылки."
-  },
-  "certificates.certificateNotFoundError": {
-    "description": "Ошибка, когда сертификат для удаления не найден",
-    "value": "Сертификат не найден или уже был удален"
-  },
-  "certificates.readOnlyCertificateError": {
-    "description": "Ошибка при попытке удалить сертификат только для чтения",
-    "value": "Невозможно удалить сертификат только для чтения"
-  },
-  "certificates.deletedSuccessfully": {
-    "description": "Сообщение об успехе при удалении сертификата",
-    "value": "Сертификат '{{name}}' успешно удален"
   },
   "certificates.list": {
     "description": "Текст для списка сертификатов",
@@ -518,7 +462,7 @@
   },
   "common.wired": {
     "description": "Текст для беспроводной кнопки",
-    "value": "Wired"
+    "value": "Проводной"
   },
   "common.wireless": {
     "description": "Текст для проводной кнопки",
@@ -567,9 +511,9 @@
     "description": "Заполнитель текста для поля порта",
     "value": "Порт"
   },
-  "configDetail.generateRandomPassword": {
-    "description": "Текст для переключателя генерации случайного пароля",
-    "value": "Генерировать случайный пароль для каждого устройства при активации устройства"
+  "configDetail.regeneratePassword": {
+    "description": "Текст для переключателя «Восстановить пароль»",
+    "value": "Генерация нового случайного пароля при сохранении"
   },
   "configDetail.usernameHint": {
     "description": "Подсказка для поля имени пользователя",
@@ -1061,6 +1005,18 @@
     "description": "Заголовок столбца таблицы для тегов",
     "value": "Теги"
   },
+  "deviceToolbar.power.on": {
+    "description": "Подсказка питания для состояния включено",
+    "value": "Питание: Включено"
+  },
+  "deviceToolbar.power.sleep": {
+    "description": "Подсказка питания для состояния сон",
+    "value": "Питание: Сон"
+  },
+  "deviceToolbar.power.off": {
+    "description": "Подсказка питания для состояния выключено",
+    "value": "Питание: Выключено"
+  },
   "deviceUserConsent.description": {
     "description": "Описание согласия пользователя для устройств",
     "value": "Для доступа к системе требуется код согласия пользователя, сгенерированный Intel AMT."
@@ -1373,7 +1329,7 @@
   },
   "general.amtTrustedDNSSuffix": {
     "description": "Метка для доверенного DNS-суффикса AMT",
-    "value": "AMT Trusted DNS Suffix (MEBx):"
+    "value": "Доверенный DNS-суффикс AMT (MEBx):"
   },
   "general.amtVersion": {
     "description": "Метка для версии AMT",
@@ -1466,14 +1422,6 @@
   "general.windowsRecoverySupported": {
     "description": "Подсказка для Windows Восстановление поддерживается",
     "value": "Поддерживается восстановление Windows."
-  },
-  "general.redirectionWarning": {
-    "description": "Предупреждение, когда перенаправление отключено, но KVM/SOL/IDER включен",
-    "value": "Перенаправление отключено. KVM, SOL и IDER требуют включения перенаправления."
-  },
-  "general.redirectionEnable": {
-    "description": "Надпись кнопки для включения перенаправления",
-    "value": "Включить"
   },
   "httpBoot.enforce": {
     "value": "Обеспечьте безопасную загрузку."
@@ -1691,26 +1639,6 @@
   "kvm.stopIder.label": {
     "description": "Метка кнопки для остановки сеанса IDER",
     "value": "Прекратите IDER"
-  },
-  "kvm.status.checkingPowerState": {
-    "description": "Сообщение о состоянии при проверке состояния питания",
-    "value": "Проверка состояния питания..."
-  },
-  "kvm.status.checkingRedirection": {
-    "description": "Сообщение о состоянии при проверке статуса перенаправления",
-    "value": "Проверка статуса перенаправления..."
-  },
-  "kvm.status.checkingAMTFeatures": {
-    "description": "Сообщение о состоянии при получении функций AMT",
-    "value": "Получение функций AMT..."
-  },
-  "kvm.status.checkingConsent": {
-    "description": "Сообщение о состоянии при проверке согласия пользователя",
-    "value": "Проверка режима согласия..."
-  },
-  "kvm.status.connectingKVM": {
-    "description": "Сообщение о состоянии при подключении компонента KVM",
-    "value": "Подключение к KVM..."
   },
   "kvm.title": {
     "description": "Название для KVM",
@@ -2029,7 +1957,7 @@
     "value": "Путь к загрузочному файлу"
   },
   "powerOptions.hibernate": {
-    "value": "Hibernate"
+    "value": "Гибернация"
   },
   "powerOptions.off": {
     "value": "Выключено"
@@ -2673,10 +2601,6 @@
     "value": "Перетащите для изменения порядка",
     "description": "Подсказка для изменения порядка методом drag-and-drop"
   },
-  "proxy.removeButton.ariaLabel": {
-    "value": "Удалить профиль прокси",
-    "description": "Aria-метка для кнопки удаления профиля прокси"
-  },
   "profileDetail.noProxy": {
     "description": "Сообщение при отсутствии доступных настроек прокси",
     "value": "Настройки прокси не найдены"
@@ -2780,6 +2704,14 @@
   "common.delete": {
     "value": "Удалить",
     "description": "Текст кнопки удаления"
+  },
+  "common.deleteProfile": {
+    "value": "Удалить профиль",
+    "description": "Текст кнопки удаления профиля"
+  },
+  "common.editTags": {
+    "description": "Текст кнопки для массового редактирования тегов",
+    "value": "Редактировать теги"
   },
   "common.update": {
     "value": "ОБНОВИТЬ",

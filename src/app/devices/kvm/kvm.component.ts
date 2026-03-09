@@ -83,7 +83,6 @@ export class KvmComponent implements OnInit, OnDestroy {
 
   public isFullscreen = signal(false)
   public isLoading = signal(false)
-  public loadingStatus = signal('')
   public deviceState = signal(-1)
   public mpsServer = `${environment.mpsServer.replace('http', 'ws')}/relay`
   public readyToLoadKvm = false
@@ -118,33 +117,8 @@ export class KvmComponent implements OnInit, OnDestroy {
     { value: 'windows-down', label: 'Windows Key + Down' },
     { value: 'windows-left', label: 'Windows Key + Left' },
     { value: 'windows-right', label: 'Windows Key + Right' },
-    { value: 'ctrl-w', label: 'Ctrl + W' },
-    // Alt + Function Keys
-    { value: 'alt-f1', label: 'Alt + F1' },
-    { value: 'alt-f2', label: 'Alt + F2' },
-    { value: 'alt-f3', label: 'Alt + F3' },
     { value: 'alt-f4', label: 'Alt + F4' },
-    { value: 'alt-f5', label: 'Alt + F5' },
-    { value: 'alt-f6', label: 'Alt + F6' },
-    { value: 'alt-f7', label: 'Alt + F7' },
-    { value: 'alt-f8', label: 'Alt + F8' },
-    { value: 'alt-f9', label: 'Alt + F9' },
-    { value: 'alt-f10', label: 'Alt + F10' },
-    { value: 'alt-f11', label: 'Alt + F11' },
-    { value: 'alt-f12', label: 'Alt + F12' },
-    // Ctrl + Alt + Function Keys
-    { value: 'ctrl-alt-f1', label: 'Ctrl + Alt + F1' },
-    { value: 'ctrl-alt-f2', label: 'Ctrl + Alt + F2' },
-    { value: 'ctrl-alt-f3', label: 'Ctrl + Alt + F3' },
-    { value: 'ctrl-alt-f4', label: 'Ctrl + Alt + F4' },
-    { value: 'ctrl-alt-f5', label: 'Ctrl + Alt + F5' },
-    { value: 'ctrl-alt-f6', label: 'Ctrl + Alt + F6' },
-    { value: 'ctrl-alt-f7', label: 'Ctrl + Alt + F7' },
-    { value: 'ctrl-alt-f8', label: 'Ctrl + Alt + F8' },
-    { value: 'ctrl-alt-f9', label: 'Ctrl + Alt + F9' },
-    { value: 'ctrl-alt-f10', label: 'Ctrl + Alt + F10' },
-    { value: 'ctrl-alt-f11', label: 'Ctrl + Alt + F11' },
-    { value: 'ctrl-alt-f12', label: 'Ctrl + Alt + F12' }
+    { value: 'ctrl-w', label: 'Ctrl + W' }
   ]
 
   constructor() {
@@ -173,12 +147,6 @@ export class KvmComponent implements OnInit, OnDestroy {
     this.timeInterval = interval(15000)
       .pipe(mergeMap(() => this.getPowerState(this.deviceId())))
       .subscribe()
-
-    // Add keyboard event listeners in capture phase to intercept before KVM component
-    // This is necessary because the KVM UI toolkit component also listens in capture phase
-    document.addEventListener('keydown', this.handleKeyboardEventCapture, true)
-    document.addEventListener('keyup', this.handleKeyboardEventCapture, true)
-    document.addEventListener('keypress', this.handleKeyboardEventCapture, true)
 
     this.init()
   }
@@ -217,17 +185,13 @@ export class KvmComponent implements OnInit, OnDestroy {
       }
     })
     // device needs to be powered on in order to start KVM session
-    this.loadingStatus.set('kvm.status.checkingPowerState.value')
     this.getPowerState(this.deviceId())
       .pipe(
-        tap(() => this.loadingStatus.set('kvm.status.checkingRedirection.value')),
         switchMap((powerState) => this.handlePowerState(powerState)),
         switchMap((result) => (result === null ? of() : this.getRedirectionStatus(this.deviceId()))),
-        tap(() => this.loadingStatus.set('kvm.status.checkingAMTFeatures.value')),
         switchMap((result: RedirectionStatus) => this.handleRedirectionStatus(result)),
         switchMap((result) => (result === null ? of() : this.getAMTFeatures())),
         switchMap((results: AMTFeaturesResponse) => this.handleAMTFeaturesResponse(results)),
-        tap(() => this.loadingStatus.set('kvm.status.checkingConsent.value')),
         switchMap((result: boolean | any) =>
           iif(
             () => result === false,
@@ -236,20 +200,17 @@ export class KvmComponent implements OnInit, OnDestroy {
           )
         ),
         switchMap((result: any) =>
-          // safely convert null to undefined for type compatibility
-          this.userConsentService.handleUserConsentDecision(result, this.deviceId(), this.amtFeatures() ?? undefined)
+          this.userConsentService.handleUserConsentDecision(result, this.deviceId(), this.amtFeatures()!)
         ),
         switchMap((result: any | UserConsentResponse) =>
           this.userConsentService.handleUserConsentResponse(this.deviceId(), result, 'KVM')
         ),
-        switchMap((result: any) => this.postUserConsentDecision(result)),
-        catchError((err) => {
-          this.isLoading.set(false)
-          this.loadingStatus.set('')
-          return throwError(() => err)
-        })
+        switchMap((result: any) => this.postUserConsentDecision(result))
       )
       .subscribe()
+      .add(() => {
+        this.isLoading.set(false)
+      })
   }
 
   postUserConsentDecision(result: boolean): Observable<any> {
@@ -258,44 +219,19 @@ export class KvmComponent implements OnInit, OnDestroy {
       this.readyToLoadKvm = this.amtFeatures()?.kvmAvailable ?? false
       // Auto-connect - ensure connection state is properly set
       this.isDisconnecting = false
-      this.loadingStatus.set('kvm.status.connectingKVM.value')
       this.deviceKVMConnection.set(true)
       this.getAMTFeatures()
     } else {
       this.isLoading.set(false)
-      this.loadingStatus.set('')
       this.deviceState.set(0)
     }
     return of(null)
   }
 
-  private handleKeyboardEventCapture = (event: KeyboardEvent): void => {
-    // Only intercept keyboard events when KVM is connected
-    if (this.deviceKVMConnection()) {
-      const activeElement = document.activeElement as HTMLElement
-      const tagName = activeElement?.tagName.toLowerCase()
-
-      // Check if the active element is an input field, textarea, select, or has contenteditable
-      const isInputElement =
-        tagName === 'input' ||
-        tagName === 'textarea' ||
-        tagName === 'select' ||
-        activeElement?.isContentEditable ||
-        activeElement?.closest('mat-select') !== null ||
-        activeElement?.closest('mat-form-field') !== null ||
-        activeElement?.closest('.mat-select-panel') !== null
-
-      // If an input element has focus, stop the event immediately to prevent KVM from capturing it
-      if (isInputElement) {
-        event.stopImmediatePropagation()
-      }
-    }
-  }
-
-  @HostListener('document:fullscreenchange')
-  @HostListener('document:webkitfullscreenchange')
-  @HostListener('document:mozfullscreenchange')
-  @HostListener('document:MSFullscreenChange')
+  @HostListener('document:fullscreenchange', ['$event'])
+  @HostListener('document:webkitfullscreenchange', ['$event'])
+  @HostListener('document:mozfullscreenchange', ['$event'])
+  @HostListener('document:MSFullscreenChange', ['$event'])
   exitFullscreen(): void {
     if (
       !document.fullscreenElement &&
@@ -316,7 +252,7 @@ export class KvmComponent implements OnInit, OnDestroy {
     this.init()
     this.deviceKVMConnection.set(true)
   }
-  @HostListener('window:beforeunload')
+  @HostListener('window:beforeunload', ['$event'])
   beforeUnloadHandler() {
     this.disconnect()
   }
@@ -380,7 +316,7 @@ export class KvmComponent implements OnInit, OnDestroy {
         this.isLoading.set(false)
         const msg: string = this.translate.instant('kvm.errorRetrieve.value')
         this.displayError(msg)
-        return throwError(() => err)
+        return throwError(err)
       })
     )
   }
@@ -401,7 +337,7 @@ export class KvmComponent implements OnInit, OnDestroy {
         this.isLoading.set(false)
         const msg: string = this.translate.instant('kvm.errorRetrieve.value')
         this.displayError(msg)
-        return throwError(() => err)
+        return throwError(err)
       })
     )
   }
@@ -413,10 +349,9 @@ export class KvmComponent implements OnInit, OnDestroy {
       return of(true)
     }
 
-    if (this.amtFeatures()?.redirection && this.amtFeatures()?.KVM) {
+    if (this.amtFeatures()?.KVM) {
       return of(true)
     }
-
     return this.enableKvmDialog().pipe(
       catchError((err) => {
         const msg: string = this.translate.instant('kvm.errorRetrieve.value')
@@ -504,12 +439,10 @@ export class KvmComponent implements OnInit, OnDestroy {
     this.deviceState.set(event)
     if (event === 2) {
       this.isLoading.set(false)
-      this.loadingStatus.set('')
     } else if (event === 0) {
       this.isLoading.set(false)
-      this.loadingStatus.set('')
       if (!this.isDisconnecting && !this.isEncodingChange) {
-        this.displayError(this.translate.instant('errors.kvmConnection.value'))
+        this.displayError(this.translate.instant('error.kvmConnection.value'))
       }
       this.isDisconnecting = false
     }
@@ -540,9 +473,5 @@ export class KvmComponent implements OnInit, OnDestroy {
     if (this.timeInterval) {
       this.timeInterval.unsubscribe()
     }
-    // Remove keyboard event listeners
-    document.removeEventListener('keydown', this.handleKeyboardEventCapture, true)
-    document.removeEventListener('keyup', this.handleKeyboardEventCapture, true)
-    document.removeEventListener('keypress', this.handleKeyboardEventCapture, true)
   }
 }

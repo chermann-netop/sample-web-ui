@@ -1,4 +1,4 @@
-{
+﻿{
   "about.cloudMode": {
     "description": "Titolo per la sezione \"Informazioni\" in modalità cloud",
     "value": "Informazioni sul toolkit di gestione dei dispositivi Esempio di interfaccia utente web"
@@ -123,42 +123,6 @@
     "description": "Messaggio per l'utilizzo di TLS",
     "value": "Utilizzare TLS."
   },
-  "addDevice.useCIRA": {
-    "description": "Casella di controllo per utilizzare la connessione CIRA",
-    "value": "Usa CIRA"
-  },
-  "addDevice.guid": {
-    "description": "Etichetta per il campo GUID",
-    "value": "GUID"
-  },
-  "addDevice.enterGuid": {
-    "description": "Suggerimento per inserire il GUID",
-    "value": "Inserisci GUID"
-  },
-  "addDevice.mpsUsername": {
-    "description": "Etichetta per il campo nome utente MPS",
-    "value": "Nome utente MPS"
-  },
-  "addDevice.mpsUsernameHint": {
-    "description": "Suggerimento per il campo nome utente MPS",
-    "value": "Nome utente MPS (predefinito: admin)"
-  },
-  "addDevice.mpsPassword": {
-    "description": "Etichetta per il campo password MPS",
-    "value": "Password MPS"
-  },
-  "addDevice.mpsPasswordHint": {
-    "description": "Suggerimento per il campo password MPS",
-    "value": "Inserire password MPS"
-  },
-  "addDevice.amtPassword": {
-    "description": "Etichetta per il campo password AMT",
-    "value": "Password AMT"
-  },
-  "addDevice.amtPasswordHint": {
-    "description": "Suggerimento per il campo password AMT",
-    "value": "Inserire password AMT"
-  },
   "alarm.errorAdding": {
     "description": "Errore durante l'aggiunta",
     "value": "Errore durante l'aggiunta di occorrenze di allarme"
@@ -170,10 +134,6 @@
   "alarm.errorRetrieve": {
     "description": "Errore durante il recupero",
     "value": "Errore durante il recupero delle occorrenze dell'allarme"
-  },
-  "alarm.successAdding": {
-    "description": "Messaggio di successo per l'aggiunta di allarme",
-    "value": "Allarme creato con successo"
   },
   "alarmService.addNew": {
     "description": "Testo del pulsante per aggiungere un nuovo allarme",
@@ -287,22 +247,6 @@
   "certificates.errorRetrievingCertificates": {
     "description": "Errore durante il recupero delle informazioni sul certificato",
     "value": "Errore durante il recupero delle informazioni sul certificato"
-  },
-  "certificates.certificateReferencedError": {
-    "description": "Messaggio di errore quando un certificato non può essere eliminato perché è referenziato da profili",
-    "value": "Il certificato non può essere eliminato perché è attualmente referenziato da profili AMT. Rimuovere prima i riferimenti."
-  },
-  "certificates.certificateNotFoundError": {
-    "description": "Messaggio di errore quando il certificato da eliminare non viene trovato",
-    "value": "Certificato non trovato o già eliminato"
-  },
-  "certificates.readOnlyCertificateError": {
-    "description": "Messaggio di errore quando si tenta di eliminare un certificato di sola lettura",
-    "value": "Impossibile eliminare il certificato di sola lettura"
-  },
-  "certificates.deletedSuccessfully": {
-    "description": "Messaggio di successo visualizzato quando un certificato viene eliminato",
-    "value": "Certificato '{{name}}' eliminato con successo"
   },
   "certificates.list": {
     "description": "Testo per l'elenco dei certificati",
@@ -518,7 +462,7 @@
   },
   "common.wired": {
     "description": "Testo per il pulsante wireless",
-    "value": "Wired"
+    "value": "Cablato"
   },
   "common.wireless": {
     "description": "Testo per pulsante cablato",
@@ -533,7 +477,7 @@
   },
   "configDetail.commonNamePlaceholder": {
     "description": "Testo segnaposto per il campo del nome comune",
-    "value": "Cert Common Name (CN=)"
+    "value": "Nome comune certificato (CN=)"
   },
   "configDetail.configNameHint": {
     "description": "Testo suggerimento per il campo del nome di configurazione",
@@ -567,9 +511,9 @@
     "description": "Testo segnaposto per il campo porta",
     "value": "Port"
   },
-  "configDetail.generateRandomPassword": {
-    "description": "Testo per il pulsante di generazione password casuale",
-    "value": "Genera password casuale per dispositivo all'attivazione del dispositivo"
+  "configDetail.regeneratePassword": {
+    "description": "Testo per il pulsante di rigenerazione della password",
+    "value": "Generare una nuova password casuale al momento del salvataggio"
   },
   "configDetail.usernameHint": {
     "description": "Testo di suggerimento per il campo nome utente",
@@ -631,7 +575,7 @@
   },
   "configs.table.ciraCert": {
     "description": "Certifica intestazione colonna Nome comune",
-    "value": "Cert Common Name (CN=)"
+    "value": "Nome comune certificato (CN=)"
   },
   "configs.table.ciraMpsserver": {
     "description": "Intestazione della colonna MPS Server",
@@ -1061,6 +1005,18 @@
     "description": "Intestazione della colonna della tabella per i tag",
     "value": "Tag"
   },
+  "deviceToolbar.power.on": {
+    "description": "Tooltip di alimentazione per acceso",
+    "value": "Alimentazione: Acceso"
+  },
+  "deviceToolbar.power.sleep": {
+    "description": "Tooltip di alimentazione per sospensione",
+    "value": "Alimentazione: Sospensione"
+  },
+  "deviceToolbar.power.off": {
+    "description": "Tooltip di alimentazione per spento",
+    "value": "Alimentazione: Spento"
+  },
   "deviceUserConsent.description": {
     "description": "Descrizione del consenso dell'utente per i dispositivi",
     "value": "Per accedere al sistema è necessario un codice di consenso dell'utente generato da Intel AMT."
@@ -1467,14 +1423,6 @@
     "description": "Tooltip per il ripristino di Windows supportato",
     "value": "È supportato il ripristino di Windows."
   },
-  "general.redirectionWarning": {
-    "description": "Avviso quando il reindirizzamento è disabilitato ma KVM/SOL/IDER è abilitato",
-    "value": "Il reindirizzamento è disabilitato. KVM, SOL e IDER richiedono l'abilitazione del reindirizzamento."
-  },
-  "general.redirectionEnable": {
-    "description": "Etichetta del pulsante per abilitare il reindirizzamento",
-    "value": "Abilita"
-  },
   "httpBoot.enforce": {
     "value": "Applicare l'avvio sicuro"
   },
@@ -1691,26 +1639,6 @@
   "kvm.stopIder.label": {
     "description": "Etichetta del pulsante per interrompere la sessione IDER",
     "value": "Interrompere IDER"
-  },
-  "kvm.status.checkingPowerState": {
-    "description": "Messaggio di stato mostrato durante la verifica dello stato di alimentazione",
-    "value": "Verifica dello stato di alimentazione..."
-  },
-  "kvm.status.checkingRedirection": {
-    "description": "Messaggio di stato mostrato durante la verifica dello stato di reindirizzamento",
-    "value": "Verifica dello stato di reindirizzamento..."
-  },
-  "kvm.status.checkingAMTFeatures": {
-    "description": "Messaggio di stato mostrato durante il recupero delle funzionalità AMT",
-    "value": "Recupero delle funzionalità AMT..."
-  },
-  "kvm.status.checkingConsent": {
-    "description": "Messaggio di stato mostrato durante la verifica del consenso dell'utente",
-    "value": "Controllo della modalità di consenso..."
-  },
-  "kvm.status.connectingKVM": {
-    "description": "Messaggio di stato mostrato durante la connessione del componente KVM",
-    "value": "Connessione a KVM in corso..."
   },
   "kvm.title": {
     "description": "Titolo per KVM",
@@ -2029,7 +1957,7 @@
     "value": "Percorso del file di avvio"
   },
   "powerOptions.hibernate": {
-    "value": "Hibernate"
+    "value": "Ibernare"
   },
   "powerOptions.off": {
     "value": "Off"
@@ -2068,7 +1996,7 @@
     "value": "Sonno"
   },
   "powerOptions.softOff": {
-    "value": "Soft-Off"
+    "value": "Spegnimento graduale"
   },
   "powerOptions.softReset": {
     "value": "Soft reset"
@@ -2673,10 +2601,6 @@
     "value": "Trascina e rilascia per riordinare",
     "description": "Suggerimento mostrato per il riordino tramite drag-and-drop"
   },
-  "proxy.removeButton.ariaLabel": {
-    "value": "Rimuovi profilo proxy",
-    "description": "Etichetta aria per il pulsante di rimozione del profilo proxy"
-  },
   "profileDetail.noProxy": {
     "description": "Messaggio quando non ci sono configurazioni proxy disponibili",
     "value": "Nessuna configurazione proxy trovata"
@@ -2780,6 +2704,14 @@
   "common.delete": {
     "value": "Elimina",
     "description": "Testo del pulsante Elimina"
+  },
+  "common.deleteProfile": {
+    "value": "Elimina profilo",
+    "description": "Testo del pulsante per eliminare il profilo"
+  },
+  "common.editTags": {
+    "description": "Testo del pulsante per modificare le etichette in massa",
+    "value": "Modificare etichette"
   },
   "common.update": {
     "value": "AGGIORNA",

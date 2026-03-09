@@ -1,4 +1,4 @@
-{
+﻿{
   "about.cloudMode": {
     "description": "Titel för avsnittet Om i molnläget",
     "value": "Om verktygssatsen för enhetshantering Exempel på webbgränssnitt"
@@ -123,42 +123,6 @@
     "description": "Meddelande om användning av TLS",
     "value": "Använd TLS"
   },
-  "addDevice.useCIRA": {
-    "description": "Kryssruta för att använda CIRA-anslutning",
-    "value": "Använd CIRA"
-  },
-  "addDevice.guid": {
-    "description": "Etikett för GUID-fält",
-    "value": "GUID"
-  },
-  "addDevice.enterGuid": {
-    "description": "Tips för att ange GUID",
-    "value": "Ange GUID"
-  },
-  "addDevice.mpsUsername": {
-    "description": "Etikett för MPS-användarnamnsfält",
-    "value": "MPS-användarnamn"
-  },
-  "addDevice.mpsUsernameHint": {
-    "description": "Tips för MPS-användarnamnsfält",
-    "value": "MPS-användarnamn (standard: admin)"
-  },
-  "addDevice.mpsPassword": {
-    "description": "Etikett för MPS-lösenordsfält",
-    "value": "MPS-lösenord"
-  },
-  "addDevice.mpsPasswordHint": {
-    "description": "Tips för MPS-lösenordsfält",
-    "value": "Ange MPS-lösenord"
-  },
-  "addDevice.amtPassword": {
-    "description": "Etikett för AMT-lösenordsfält",
-    "value": "AMT-lösenord"
-  },
-  "addDevice.amtPasswordHint": {
-    "description": "Tips för AMT-lösenordsfält",
-    "value": "Ange AMT-lösenord"
-  },
   "alarm.errorAdding": {
     "description": "Fel vid tillägg",
     "value": "Fel vid tillägg av larmhändelser"
@@ -170,10 +134,6 @@
   "alarm.errorRetrieve": {
     "description": "Fel vid hämtning",
     "value": "Fel vid hämtning av larmhändelser"
-  },
-  "alarm.successAdding": {
-    "description": "Framgångsmeddelande för tillägg av larm",
-    "value": "Larm skapades framgångsrikt"
   },
   "alarmService.addNew": {
     "description": "Knapptext för att lägga till ett nytt larm",
@@ -287,22 +247,6 @@
   "certificates.errorRetrievingCertificates": {
     "description": "Fel vid hämtning av certifikatinformation",
     "value": "Fel vid hämtning av certifikatinformation"
-  },
-  "certificates.certificateReferencedError": {
-    "description": "Fel när certifikat inte kan raderas eftersom det refereras av profiler",
-    "value": "Certifikatet kan inte raderas eftersom det för närvarande refereras av AMT-profiler. Ta bort referenserna först."
-  },
-  "certificates.certificateNotFoundError": {
-    "description": "Fel när certifikat som ska raderas inte hittas",
-    "value": "Certifikat hittades inte eller har redan raderats"
-  },
-  "certificates.readOnlyCertificateError": {
-    "description": "Fel vid försök att radera skrivskyddat certifikat",
-    "value": "Kan inte radera skrivskyddat certifikat"
-  },
-  "certificates.deletedSuccessfully": {
-    "description": "Framgångsmeddelande när certifikat raderas",
-    "value": "Certifikat '{{name}}' raderat framgångsrikt"
   },
   "certificates.list": {
     "description": "Text för listan över certifikat",
@@ -518,7 +462,7 @@
   },
   "common.wired": {
     "description": "Text för trådlös knapp",
-    "value": "Wired"
+    "value": "Kabelansluten"
   },
   "common.wireless": {
     "description": "Text för kabelansluten knapp",
@@ -533,7 +477,7 @@
   },
   "configDetail.commonNamePlaceholder": {
     "description": "Platshållartext för fältet för vanligt namn",
-    "value": "Cert Common Name (CN=)"
+    "value": "Certifikatets allmänna namn (CN=)"
   },
   "configDetail.configNameHint": {
     "description": "Tips för fältet för konfigurationsnamn",
@@ -567,9 +511,9 @@
     "description": "Platshållartext för portfält",
     "value": "Port"
   },
-  "configDetail.generateRandomPassword": {
-    "description": "Text för att generera slumpmässigt lösenord",
-    "value": "Generera slumpmässigt lösenord per enhet vid enhetsaktivering"
+  "configDetail.regeneratePassword": {
+    "description": "Text för att återställa lösenord",
+    "value": "Generera nytt slumpmässigt lösenord vid sparande"
   },
   "configDetail.usernameHint": {
     "description": "Tips för användarnamnsfältet",
@@ -631,7 +575,7 @@
   },
   "configs.table.ciraCert": {
     "description": "Cert Common Name-kolumnrubrik",
-    "value": "Cert Common Name (CN=)"
+    "value": "Certifikatets allmänna namn (CN=)"
   },
   "configs.table.ciraMpsserver": {
     "description": "MPS Server-kolumnrubrik",
@@ -1061,6 +1005,18 @@
     "description": "Tabellkolumnrubrik för taggar",
     "value": "Taggar"
   },
+  "deviceToolbar.power.on": {
+    "description": "Strömverktygstips för på",
+    "value": "Ström: På"
+  },
+  "deviceToolbar.power.sleep": {
+    "description": "Strömverktygstips för viloläge",
+    "value": "Ström: Viloläge"
+  },
+  "deviceToolbar.power.off": {
+    "description": "Strömverktygstips för av",
+    "value": "Ström: Av"
+  },
   "deviceUserConsent.description": {
     "description": "Beskrivning av användarens samtycke för enheter",
     "value": "En användarkod genererad av Intel AMT krävs för att få åtkomst till systemet."
@@ -1457,7 +1413,7 @@
   },
   "general.windowsRecoveryBoot": {
     "description": "Etikett för Windows Recovery Boot",
-    "value": "Windows Recovery Boot:"
+    "value": "Windows återställningsstart:"
   },
   "general.windowsRecoveryNotSupported": {
     "description": "Verktygstips för Windows Återställning stöds inte",
@@ -1466,14 +1422,6 @@
   "general.windowsRecoverySupported": {
     "description": "Verktygstips för Windows Återställning stöds",
     "value": "Windows Recovery stöds"
-  },
-  "general.redirectionWarning": {
-    "description": "Varning när omdirigering är inaktiverad men KVM/SOL/IDER är aktiverat",
-    "value": "Omdirigering är inaktiverad. KVM, SOL och IDER kräver att omdirigering är aktiverad."
-  },
-  "general.redirectionEnable": {
-    "description": "Knappetikett för att aktivera omdirigering",
-    "value": "Aktivera"
   },
   "httpBoot.enforce": {
     "value": "Tillämpa säker uppstart"
@@ -1691,26 +1639,6 @@
   "kvm.stopIder.label": {
     "description": "Knappetikett för att avsluta IDER-sessionen",
     "value": "Stoppa IDER"
-  },
-  "kvm.status.checkingPowerState": {
-    "description": "Statusmeddelande som visas vid kontroll av energistatus",
-    "value": "Kontrollerar energistatus..."
-  },
-  "kvm.status.checkingRedirection": {
-    "description": "Statusmeddelande som visas vid kontroll av omdirigeringsstatus",
-    "value": "Kontrollerar omdirigeringsstatus..."
-  },
-  "kvm.status.checkingAMTFeatures": {
-    "description": "Statusmeddelande som visas vid hämtning av AMT-funktioner",
-    "value": "Hämtar AMT-funktioner..."
-  },
-  "kvm.status.checkingConsent": {
-    "description": "Statusmeddelande som visas vid kontroll av användarens samtycke",
-    "value": "Kontrollerar samtyckesläge..."
-  },
-  "kvm.status.connectingKVM": {
-    "description": "Statusmeddelande som visas när KVM-komponenten ansluter",
-    "value": "Ansluter till KVM..."
   },
   "kvm.title": {
     "description": "Titel för KVM",
@@ -2029,7 +1957,7 @@
     "value": "Sökväg till startfil"
   },
   "powerOptions.hibernate": {
-    "value": "Hibernate"
+    "value": "Vintervila"
   },
   "powerOptions.off": {
     "value": "Av"
@@ -2068,7 +1996,7 @@
     "value": "Sömn"
   },
   "powerOptions.softOff": {
-    "value": "Soft-Off"
+    "value": "Mjuk avstängning"
   },
   "powerOptions.softReset": {
     "value": "Mjuk återställning"
@@ -2673,10 +2601,6 @@
     "value": "Dra och släpp för att ändra ordning",
     "description": "Tips för att ändra ordning med dra-och-släpp"
   },
-  "proxy.removeButton.ariaLabel": {
-    "value": "Ta bort proxyprofil",
-    "description": "Aria-etikett för knappen för att ta bort proxyprofil"
-  },
   "profileDetail.noProxy": {
     "description": "Meddelande när inga proxyinställningar är tillgängliga",
     "value": "Inga proxyinställningar hittades"
@@ -2780,6 +2704,14 @@
   "common.delete": {
     "value": "Radera",
     "description": "Text på raderaknappen"
+  },
+  "common.deleteProfile": {
+    "value": "Ta bort profil",
+    "description": "Text för knappen för att ta bort profil"
+  },
+  "common.editTags": {
+    "description": "Knapptext för att redigera taggar i bulk",
+    "value": "Redigera taggar"
   },
   "common.update": {
     "value": "UPPDATERA",

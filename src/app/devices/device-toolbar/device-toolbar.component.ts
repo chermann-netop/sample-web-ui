@@ -7,7 +7,7 @@ import { Component, OnInit, inject, signal, input, DestroyRef } from '@angular/c
 import { catchError, finalize, switchMap } from 'rxjs/operators'
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { Router } from '@angular/router'
-import { Observable, of, forkJoin } from 'rxjs'
+import { Observable, of } from 'rxjs'
 import { DevicesService } from '../devices.service'
 import SnackbarDefaults from 'src/app/shared/config/snackBarDefault'
 import { AMTFeaturesResponse, BootDetails, Device, UserConsentResponse } from 'src/models/models'
@@ -29,8 +29,6 @@ import { HTTPBootDialogComponent } from './http-boot-dialog/http-boot-dialog.com
 import { PBABootDialogComponent } from './pba-boot-dialog/pba-boot-dialog.component'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
 import { TranslateModule, TranslateService } from '@ngx-translate/core'
-
-const PROVISIONING_MODE_CCM = 4
 
 interface PowerOptions {
   label: string
@@ -214,10 +212,10 @@ export class DeviceToolbarComponent implements OnInit {
     this.devicesService.getPowerState(this.deviceId()).subscribe((powerState) => {
       this.powerState.set(
         powerState.powerstate.toString() === '2'
-          ? 'Power: On'
+          ? 'deviceToolbar.power.on.value'
           : powerState.powerstate.toString() === '3' || powerState.powerstate.toString() === '4'
-            ? 'Power: Sleep'
-            : 'Power: Off'
+            ? 'deviceToolbar.power.sleep.value'
+            : 'deviceToolbar.power.off.value'
       )
       this.isLoading().set(false)
     })
@@ -260,41 +258,29 @@ export class DeviceToolbarComponent implements OnInit {
   }
 
   performHTTPBoot(action: number): void {
-    this.devicesService
-      .getAMTVersion(this.deviceId())
-      .pipe(catchError(() => of(null)))
-      .subscribe((amtVersion) => {
-        const isCCM = amtVersion?.AMT_SetupAndConfigurationService?.response?.ProvisioningMode === PROVISIONING_MODE_CCM
-        const dialogRef = this.dialog.open(HTTPBootDialogComponent, {
-          width: '400px',
-          disableClose: false,
-          data: { isCCM }
-        })
+    const dialogRef = this.dialog.open(HTTPBootDialogComponent, {
+      width: '400px',
+      disableClose: false
+    })
 
-        dialogRef.afterClosed().subscribe((bootDetails: BootDetails) => {
-          if (!bootDetails) {
-            return
-          }
-          this.executeAuthorizedPowerAction(action, false, bootDetails)
-        })
-      })
+    dialogRef.afterClosed().subscribe((bootDetails: BootDetails) => {
+      if (!bootDetails) {
+        return
+      }
+      this.executeAuthorizedPowerAction(action, false, bootDetails)
+    })
   }
 
   // Add this new method for PBA boot
   performPBABoot(action: number): void {
-    forkJoin({
-      amtVersion: this.devicesService.getAMTVersion(this.deviceId()).pipe(catchError(() => of(null))),
-      sources: this.devicesService.getBootSources(this.deviceId())
-    }).subscribe(({ amtVersion, sources }) => {
-      const isCCM = amtVersion?.AMT_SetupAndConfigurationService?.response?.ProvisioningMode === PROVISIONING_MODE_CCM
+    this.devicesService.getBootSources(this.deviceId()).subscribe((sources) => {
       const pbaSources = sources.filter((s) => s.biosBootString?.toLowerCase().includes('pba'))
       const dialogRef = this.dialog.open(PBABootDialogComponent, {
         width: '400px',
         disableClose: false,
         data: {
           pbaBootFilesPath: pbaSources,
-          action: action,
-          isCCM
+          action: action
         }
       })
       dialogRef.afterClosed().subscribe((bootDetails: BootDetails) => {

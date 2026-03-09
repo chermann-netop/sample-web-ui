@@ -1,4 +1,4 @@
-{
+﻿{
   "about.cloudMode": {
     "description": "Titre de la section « À propos » en mode cloud",
     "value": "À propos de l'outil de gestion des appareils Exemple d'interface utilisateur Web"
@@ -123,42 +123,6 @@
     "description": "Message pour l'utilisation de TLS",
     "value": "Utilisez TLS."
   },
-  "addDevice.useCIRA": {
-    "description": "Case à cocher pour utiliser la connexion CIRA",
-    "value": "Utiliser CIRA"
-  },
-  "addDevice.guid": {
-    "description": "Étiquette pour le champ GUID",
-    "value": "GUID"
-  },
-  "addDevice.enterGuid": {
-    "description": "Indication pour entrer le GUID",
-    "value": "Entrez le GUID"
-  },
-  "addDevice.mpsUsername": {
-    "description": "Étiquette pour le champ nom d'utilisateur MPS",
-    "value": "Nom d'utilisateur MPS"
-  },
-  "addDevice.mpsUsernameHint": {
-    "description": "Indication pour le champ nom d'utilisateur MPS",
-    "value": "Nom d'utilisateur MPS (par défaut: admin)"
-  },
-  "addDevice.mpsPassword": {
-    "description": "Étiquette pour le champ mot de passe MPS",
-    "value": "Mot de passe MPS"
-  },
-  "addDevice.mpsPasswordHint": {
-    "description": "Indication pour le champ mot de passe MPS",
-    "value": "Entrer le mot de passe MPS"
-  },
-  "addDevice.amtPassword": {
-    "description": "Étiquette pour le champ mot de passe AMT",
-    "value": "Mot de passe AMT"
-  },
-  "addDevice.amtPasswordHint": {
-    "description": "Indication pour le champ mot de passe AMT",
-    "value": "Entrer le mot de passe AMT"
-  },
   "alarm.errorAdding": {
     "description": "Erreur lors de l'ajout",
     "value": "Erreur lors de l'ajout d'occurrences d'alarme"
@@ -170,10 +134,6 @@
   "alarm.errorRetrieve": {
     "description": "Erreur lors de la récupération",
     "value": "Erreur lors de la récupération des occurrences d'alarme"
-  },
-  "alarm.successAdding": {
-    "description": "Message de succès lors de l'ajout d'une alarme",
-    "value": "Alarme créée avec succès"
   },
   "alarmService.addNew": {
     "description": "Texte du bouton pour ajouter une nouvelle alarme",
@@ -287,22 +247,6 @@
   "certificates.errorRetrievingCertificates": {
     "description": "Erreur lors de la récupération des informations du certificat",
     "value": "Erreur lors de la récupération des informations du certificat"
-  },
-  "certificates.certificateReferencedError": {
-    "description": "Message d'erreur lorsqu'un certificat ne peut pas être supprimé car il est référencé par des profils",
-    "value": "Le certificat ne peut pas être supprimé car il est actuellement référencé par des profils AMT. Supprimez d'abord les références."
-  },
-  "certificates.certificateNotFoundError": {
-    "description": "Message d'erreur lorsque le certificat à supprimer n'est pas trouvé",
-    "value": "Certificat introuvable ou déjà supprimé"
-  },
-  "certificates.readOnlyCertificateError": {
-    "description": "Message d'erreur lors de la tentative de suppression d'un certificat en lecture seule",
-    "value": "Impossible de supprimer le certificat en lecture seule"
-  },
-  "certificates.deletedSuccessfully": {
-    "description": "Message de succès affiché lorsqu'un certificat est supprimé",
-    "value": "Certificat '{{name}}' supprimé avec succès"
   },
   "certificates.list": {
     "description": "Texte pour la liste des certificats",
@@ -518,7 +462,7 @@
   },
   "common.wired": {
     "description": "Texte pour le bouton sans fil",
-    "value": "Wired"
+    "value": "Câblé"
   },
   "common.wireless": {
     "description": "Texte pour le bouton câblé",
@@ -567,9 +511,9 @@
     "description": "Texte de remplacement pour le champ port",
     "value": "Port"
   },
-  "configDetail.generateRandomPassword": {
-    "description": "Texte pour le bouton de génération de mot de passe aléatoire",
-    "value": "Générer un mot de passe aléatoire par appareil lors de l'activation de l'appareil"
+  "configDetail.regeneratePassword": {
+    "description": "Texte pour le bouton de régénération du mot de passe",
+    "value": "Générer un nouveau mot de passe aléatoire lors de l'enregistrement"
   },
   "configDetail.usernameHint": {
     "description": "Texte d'aide pour le champ du nom d'utilisateur",
@@ -1061,6 +1005,18 @@
     "description": "En-tête de colonne du tableau pour les balises",
     "value": "Balises"
   },
+  "deviceToolbar.power.on": {
+    "description": "Info-bulle d'alimentation pour l'état allumé",
+    "value": "Alimentation : Allumé"
+  },
+  "deviceToolbar.power.sleep": {
+    "description": "Info-bulle d'alimentation pour l'état veille",
+    "value": "Alimentation : Veille"
+  },
+  "deviceToolbar.power.off": {
+    "description": "Info-bulle d'alimentation pour l'état éteint",
+    "value": "Alimentation : Éteint"
+  },
   "deviceUserConsent.description": {
     "description": "Description du consentement de l'utilisateur pour les appareils",
     "value": "Un code de consentement utilisateur généré par Intel AMT est nécessaire pour accéder au système."
@@ -1467,14 +1423,6 @@
     "description": "Info-bulle pour la récupération Windows prise en charge",
     "value": "La récupération Windows est prise en charge."
   },
-  "general.redirectionWarning": {
-    "description": "Avertissement lorsque la redirection est désactivée mais KVM/SOL/IDER est activé",
-    "value": "La redirection est désactivée. KVM, SOL et IDER nécessitent l'activation de la redirection."
-  },
-  "general.redirectionEnable": {
-    "description": "Libellé du bouton pour activer la redirection",
-    "value": "Activer"
-  },
   "httpBoot.enforce": {
     "value": "Appliquer le démarrage sécurisé"
   },
@@ -1691,26 +1639,6 @@
   "kvm.stopIder.label": {
     "description": "Étiquette du bouton pour arrêter la session IDER",
     "value": "Arrêter IDER"
-  },
-  "kvm.status.checkingPowerState": {
-    "description": "Message d'état affiché lors de la vérification de l'état d'alimentation",
-    "value": "Vérification de l'état d'alimentation..."
-  },
-  "kvm.status.checkingRedirection": {
-    "description": "Message d'état affiché lors de la vérification de l'état de redirection",
-    "value": "Vérification de l'état de redirection..."
-  },
-  "kvm.status.checkingAMTFeatures": {
-    "description": "Message d'état affiché lors de la récupération des fonctionnalités AMT",
-    "value": "Récupération des fonctionnalités AMT..."
-  },
-  "kvm.status.checkingConsent": {
-    "description": "Message d'état affiché lors de la vérification du consentement de l'utilisateur",
-    "value": "Vérification du mode de consentement..."
-  },
-  "kvm.status.connectingKVM": {
-    "description": "Message d'état affiché lors de la connexion du composant KVM",
-    "value": "Connexion à KVM en cours..."
   },
   "kvm.title": {
     "description": "Titre pour KVM",
@@ -2029,10 +1957,10 @@
     "value": "Chemin d'accès au fichier d'amorçage"
   },
   "powerOptions.hibernate": {
-    "value": "Hibernate"
+    "value": "Hiberner"
   },
   "powerOptions.off": {
-    "value": "Off"
+    "value": "Désactivé"
   },
   "powerOptions.on": {
     "value": "Sur"
@@ -2068,7 +1996,7 @@
     "value": "Sommeil"
   },
   "powerOptions.softOff": {
-    "value": "Soft-Off"
+    "value": "Arrêt progressif"
   },
   "powerOptions.softReset": {
     "value": "Réinitialisation logicielle"
@@ -2673,10 +2601,6 @@
     "value": "Glisser-déposer pour réorganiser",
     "description": "Indice affiché pour le réordonnancement par glisser-déposer"
   },
-  "proxy.removeButton.ariaLabel": {
-    "value": "Supprimer le profil de proxy",
-    "description": "Libellé aria pour le bouton de suppression du profil de proxy"
-  },
   "profileDetail.noProxy": {
     "description": "Message lorsqu’aucune configuration de proxy n’est disponible",
     "value": "Aucune configuration de proxy trouvée"
@@ -2780,6 +2704,14 @@
   "common.delete": {
     "value": "Supprimer",
     "description": "Texte du bouton Supprimer"
+  },
+  "common.deleteProfile": {
+    "value": "Supprimer le profil",
+    "description": "Texte du bouton de suppression du profil"
+  },
+  "common.editTags": {
+    "description": "Texte du bouton pour modifier les étiquettes en masse",
+    "value": "Modifier les étiquettes"
   },
   "common.update": {
     "value": "METTRE À JOUR",

@@ -123,42 +123,6 @@
     "description": "رسالة لاستخدام TLS",
     "value": "استخدم TLS"
   },
-  "addDevice.useCIRA": {
-    "description": "مربع اختيار لاستخدام اتصال CIRA",
-    "value": "استخدام CIRA"
-  },
-  "addDevice.guid": {
-    "description": "تسمية حقل GUID",
-    "value": "GUID"
-  },
-  "addDevice.enterGuid": {
-    "description": "تلميح لإدخال GUID",
-    "value": "أدخل GUID"
-  },
-  "addDevice.mpsUsername": {
-    "description": "تسمية حقل اسم مستخدم MPS",
-    "value": "اسم مستخدم MPS"
-  },
-  "addDevice.mpsUsernameHint": {
-    "description": "تلميح لحقل اسم مستخدم MPS",
-    "value": "اسم مستخدم MPS (افتراضي: admin)"
-  },
-  "addDevice.mpsPassword": {
-    "description": "تسمية حقل كلمة مرور MPS",
-    "value": "كلمة مرور MPS"
-  },
-  "addDevice.mpsPasswordHint": {
-    "description": "تلميح لحقل كلمة مرور MPS",
-    "value": "أدخل كلمة مرور MPS"
-  },
-  "addDevice.amtPassword": {
-    "description": "تسمية حقل كلمة مرور AMT",
-    "value": "كلمة مرور AMT"
-  },
-  "addDevice.amtPasswordHint": {
-    "description": "تلميح لحقل كلمة مرور AMT",
-    "value": "أدخل كلمة مرور AMT"
-  },
   "alarm.errorAdding": {
     "description": "خطأ في الإضافة",
     "value": "خطأ في إضافة حالات الإنذار"
@@ -170,10 +134,6 @@
   "alarm.errorRetrieve": {
     "description": "خطأ في الاسترداد",
     "value": "خطأ في استرداد حالات الإنذار"
-  },
-  "alarm.successAdding": {
-    "description": "رسالة نجاح لإضافة التنبيه",
-    "value": "تم إنشاء التنبيه بنجاح"
   },
   "alarmService.addNew": {
     "description": "نص الزر لإضافة منبه جديد",
@@ -287,22 +247,6 @@
   "certificates.errorRetrievingCertificates": {
     "description": "خطأ في استرداد معلومات الشهادة",
     "value": "خطأ في استرداد معلومات الشهادة"
-  },
-  "certificates.certificateReferencedError": {
-    "description": "خطأ عند عدم إمكانية حذف الشهادة لأنها مرجعة بواسطة ملفات تعريف",
-    "value": "لا يمكن حذف الشهادة لأنها مرجعة حالياً بواسطة ملفات تعريف AMT. قم بإزالة المراجع أولاً."
-  },
-  "certificates.certificateNotFoundError": {
-    "description": "خطأ عندما لا يتم العثور على الشهادة المراد حذفها",
-    "value": "لم يتم العثور على الشهادة أو تم حذفها بالفعل"
-  },
-  "certificates.readOnlyCertificateError": {
-    "description": "خطأ عند محاولة حذف شهادة للقراءة فقط",
-    "value": "لا يمكن حذف شهادة للقراءة فقط"
-  },
-  "certificates.deletedSuccessfully": {
-    "description": "رسالة نجاح عند حذف الشهادة",
-    "value": "تم حذف الشهادة '{{name}}' بنجاح"
   },
   "certificates.list": {
     "description": "نص قائمة الشهادات",
@@ -518,7 +462,7 @@
   },
   "common.wired": {
     "description": "نص الزر اللاسلكي",
-    "value": "Wired"
+    "value": "سلكي"
   },
   "common.wireless": {
     "description": "نص الزر السلكي",
@@ -567,9 +511,9 @@
     "description": "نص مؤقت لحقل المنفذ",
     "value": "الميناء"
   },
-  "configDetail.generateRandomPassword": {
-    "description": "نص لتبديل إنشاء كلمة مرور عشوائية",
-    "value": "إنشاء كلمة مرور عشوائية لكل جهاز عند تفعيل الجهاز"
+  "configDetail.regeneratePassword": {
+    "description": "نص لتبديل إعادة إنشاء كلمة المرور",
+    "value": "إنشاء كلمة مرور عشوائية جديدة عند الحفظ"
   },
   "configDetail.usernameHint": {
     "description": "نص تلميح لحقل اسم المستخدم",
@@ -1061,6 +1005,18 @@
     "description": "عنوان عمود الجدول للعلامات",
     "value": "العلامات"
   },
+  "deviceToolbar.power.on": {
+    "description": "تلميح الطاقة للحالة تشغيل",
+    "value": "الطاقة: تشغيل"
+  },
+  "deviceToolbar.power.sleep": {
+    "description": "تلميح الطاقة للحالة سكون",
+    "value": "الطاقة: سكون"
+  },
+  "deviceToolbar.power.off": {
+    "description": "تلميح الطاقة للحالة إيقاف",
+    "value": "الطاقة: إيقاف"
+  },
   "deviceUserConsent.description": {
     "description": "وصف موافقة المستخدم للأجهزة",
     "value": "يلزم وجود رمز موافقة المستخدم الذي تم إنشاؤه بواسطة Intel AMT للوصول إلى النظام."
@@ -1467,14 +1423,6 @@
     "description": "تلميح أداة لـ Windows Recovery مدعوم",
     "value": "يتم دعم استرداد Windows"
   },
-  "general.redirectionWarning": {
-    "description": "تحذير عندما يكون إعادة التوجيه معطلاً ولكن KVM/SOL/IDER مفعل",
-    "value": "إعادة التوجيه معطلة. يتطلب KVM وSOL وIDER تفعيل إعادة التوجيه."
-  },
-  "general.redirectionEnable": {
-    "description": "تسمية الزر لتفعيل إعادة التوجيه",
-    "value": "تفعيل"
-  },
   "httpBoot.enforce": {
     "value": "فرض التمهيد الآمن"
   },
@@ -1691,26 +1639,6 @@
   "kvm.stopIder.label": {
     "description": "تسمية الزر لإيقاف جلسة IDER",
     "value": "إيقاف IDER"
-  },
-  "kvm.status.checkingPowerState": {
-    "description": "رسالة الحالة المعروضة أثناء التحقق من حالة الطاقة",
-    "value": "جارٍ التحقق من حالة الطاقة..."
-  },
-  "kvm.status.checkingRedirection": {
-    "description": "رسالة الحالة المعروضة أثناء التحقق من حالة إعادة التوجيه",
-    "value": "جارٍ التحقق من حالة إعادة التوجيه..."
-  },
-  "kvm.status.checkingAMTFeatures": {
-    "description": "رسالة الحالة المعروضة أثناء استرداد ميزات AMT",
-    "value": "جارٍ استرداد ميزات AMT..."
-  },
-  "kvm.status.checkingConsent": {
-    "description": "رسالة الحالة المعروضة أثناء التحقق من موافقة المستخدم",
-    "value": "جارٍ التحقق من وضع الموافقة..."
-  },
-  "kvm.status.connectingKVM": {
-    "description": "رسالة الحالة المعروضة أثناء اتصال مكوّن KVM",
-    "value": "جارٍ الاتصال بـ KVM..."
   },
   "kvm.title": {
     "description": "عنوان KVM",
@@ -2029,7 +1957,7 @@
     "value": "مسار ملف التمهيد"
   },
   "powerOptions.hibernate": {
-    "value": "Hibernate"
+    "value": "السبات"
   },
   "powerOptions.off": {
     "value": "إيقاف"
@@ -2068,7 +1996,7 @@
     "value": "النوم"
   },
   "powerOptions.softOff": {
-    "value": "Soft-Off"
+    "value": "إيقاف تشغيل ناعم"
   },
   "powerOptions.softReset": {
     "value": "إعادة الضبط الناعمة"
@@ -2673,10 +2601,6 @@
     "value": "اسحب وأفلت لإعادة الترتيب",
     "description": "تلميح لإعادة الترتيب بالسحب والإفلات"
   },
-  "proxy.removeButton.ariaLabel": {
-    "value": "إزالة ملف تعريف الوكيل",
-    "description": "تسمية aria لزر إزالة ملف تعريف الوكيل"
-  },
   "profileDetail.noProxy": {
     "description": "رسالة عند عدم وجود إعدادات وكيل متاحة",
     "value": "لم يتم العثور على إعدادات الوكيل"
@@ -2780,6 +2704,14 @@
   "common.delete": {
     "value": "حذف",
     "description": "نص زر الحذف"
+  },
+  "common.deleteProfile": {
+    "value": "حذف الملف الشخصي",
+    "description": "نص زر حذف الملف الشخصي"
+  },
+  "common.editTags": {
+    "description": "نص زر تعديل العلامات بشكل جماعي",
+    "value": "تعديل العلامات"
   },
   "common.update": {
     "value": "تحديث",

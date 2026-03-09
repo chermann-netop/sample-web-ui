@@ -1,4 +1,4 @@
-{
+﻿{
   "about.cloudMode": {
     "description": "כותרת לסעיף אודות במצב ענן",
     "value": "אודות ממשק המשתמש לניהול כלים לניהול המכשירים מדגם אינטרנט"
@@ -123,42 +123,6 @@
     "description": "הודעה לשימוש ב- TLS",
     "value": "השתמש ב- TLS"
   },
-  "addDevice.useCIRA": {
-    "description": "תיבת סימון לשימוש בחיבור CIRA",
-    "value": "השתמש ב-CIRA"
-  },
-  "addDevice.guid": {
-    "description": "תווית לשדה GUID",
-    "value": "GUID"
-  },
-  "addDevice.enterGuid": {
-    "description": "רמז להזנת GUID",
-    "value": "הזן GUID"
-  },
-  "addDevice.mpsUsername": {
-    "description": "תווית לשדה שם משתמש MPS",
-    "value": "שם משתמש MPS"
-  },
-  "addDevice.mpsUsernameHint": {
-    "description": "רמז לשדה שם משתמש MPS",
-    "value": "שם משתמש MPS (ברירת מחדל: admin)"
-  },
-  "addDevice.mpsPassword": {
-    "description": "תווית לשדה סיסמת MPS",
-    "value": "סיסמת MPS"
-  },
-  "addDevice.mpsPasswordHint": {
-    "description": "רמז לשדה סיסמת MPS",
-    "value": "הזן סיסמת MPS"
-  },
-  "addDevice.amtPassword": {
-    "description": "תווית לשדה סיסמת AMT",
-    "value": "סיסמת AMT"
-  },
-  "addDevice.amtPasswordHint": {
-    "description": "רמז לשדה סיסמת AMT",
-    "value": "הזן סיסמת AMT"
-  },
   "alarm.errorAdding": {
     "description": "שגיאה להוספת",
     "value": "שגיאה הוספת התרחשויות אזעקה"
@@ -170,10 +134,6 @@
   "alarm.errorRetrieve": {
     "description": "שגיאה לאחזור",
     "value": "שגיאה באחזור התרחשויות אזעקה"
-  },
-  "alarm.successAdding": {
-    "description": "הודעת הצלחה להוספת אזעקה",
-    "value": "האזעקה נוצרה בהצלחה"
   },
   "alarmService.addNew": {
     "description": "טקסט כפתור כדי להוסיף אזעקה חדשה",
@@ -287,22 +247,6 @@
   "certificates.errorRetrievingCertificates": {
     "description": "שגיאה לאחזור מידע על אישור",
     "value": "שגיאה באחזור מידע על אישור"
-  },
-  "certificates.certificateReferencedError": {
-    "description": "שגיאה כאשר לא ניתן למחוק אישור מכיוון שהוא מופנה על ידי פרופילים",
-    "value": "לא ניתן למחוק את האישור מכיוון שהוא מופנה כעת על ידי פרופילי AMT. הסר תחילה את ההפניות."
-  },
-  "certificates.certificateNotFoundError": {
-    "description": "שגיאה כאשר האישור למחיקה לא נמצא",
-    "value": "האישור לא נמצא או כבר נמחק"
-  },
-  "certificates.readOnlyCertificateError": {
-    "description": "שגיאה בעת ניסיון למחוק אישור לקריאה בלבד",
-    "value": "לא ניתן למחוק אישור לקריאה בלבד"
-  },
-  "certificates.deletedSuccessfully": {
-    "description": "הודעת הצלחה כאשר האישור נמחק",
-    "value": "האישור '{{name}}' נמחק בהצלחה"
   },
   "certificates.list": {
     "description": "טקסט לרשימת התעודות",
@@ -567,9 +511,9 @@
     "description": "טקסט מציין מקום לשדה יציאה",
     "value": "נָמָל"
   },
-  "configDetail.generateRandomPassword": {
-    "description": "טקסט ליצירת סיסמה אקראית",
-    "value": "צור סיסמה אקראית לכל מכשיר בעת הפעלת המכשיר"
+  "configDetail.regeneratePassword": {
+    "description": "טקסט לחידוש סיסמא",
+    "value": "צור סיסמה אקראית חדשה לאחר שמירה"
   },
   "configDetail.usernameHint": {
     "description": "טקסט רמז לשדה שם משתמש",
@@ -1061,6 +1005,18 @@
     "description": "כותרת עמודות טבלה לתגיות",
     "value": "תגיות"
   },
+  "deviceToolbar.power.on": {
+    "description": "רמז מצב צריכת חשמל עבור פועל",
+    "value": "חשמל: פועל"
+  },
+  "deviceToolbar.power.sleep": {
+    "description": "רמז מצב צריכת חשמל עבור שינה",
+    "value": "חשמל: שינה"
+  },
+  "deviceToolbar.power.off": {
+    "description": "רמז מצב צריכת חשמל עבור כבוי",
+    "value": "חשמל: כבוי"
+  },
   "deviceUserConsent.description": {
     "description": "תיאור להסכמת משתמש למכשירים",
     "value": "קוד הסכמת משתמש שנוצר על ידי Intel AMT נדרש כדי לגשת למערכת."
@@ -1467,14 +1423,6 @@
     "description": "מסמך כלים לתמיכה בשחזור Windows הנתמך",
     "value": "התאוששות Windows נתמכת"
   },
-  "general.redirectionWarning": {
-    "description": "אזהרה כאשר הפניה מושבתת אך KVM/SOL/IDER מופעל",
-    "value": "הפניה מושבתת. KVM, SOL ו-IDER דורשים שהפניה תהיה מופעלת."
-  },
-  "general.redirectionEnable": {
-    "description": "תווית כפתור להפעלת הפניה",
-    "value": "הפעל"
-  },
   "httpBoot.enforce": {
     "value": "אוכף אתחול מאובטח"
   },
@@ -1691,26 +1639,6 @@
   "kvm.stopIder.label": {
     "description": "תווית כפתור כדי לעצור את הפעלת ider",
     "value": "עצור אידיר"
-  },
-  "kvm.status.checkingPowerState": {
-    "description": "הודעת סטאטוס המוצגת בעת בדיקת מצב הצריכה",
-    "value": "בודק מצב צריכת חשמל..."
-  },
-  "kvm.status.checkingRedirection": {
-    "description": "הודעת סטאטוס המוצגת בעת בדיקת מצב הפנייה מחדש",
-    "value": "בודק מצב הפניה מחדש..."
-  },
-  "kvm.status.checkingAMTFeatures": {
-    "description": "הודעת סטאטוס המוצגת בעת אחזור תכונות AMT",
-    "value": "מאחזר תכונות AMT..."
-  },
-  "kvm.status.checkingConsent": {
-    "description": "הודעת סטאטוס המוצגת בעת בדיקת הסכמת המשתמש",
-    "value": "בודק מצב הסכמה..."
-  },
-  "kvm.status.connectingKVM": {
-    "description": "הודעת סטאטוס המוצגת בעת חיבור רכיב KVM",
-    "value": "מתחבר ל-KVM..."
   },
   "kvm.title": {
     "description": "כותרת ל- KVM",
@@ -2780,6 +2708,14 @@
   "common.delete": {
     "value": "מחק",
     "description": "טקסט כפתור מחיקה"
+  },
+  "common.deleteProfile": {
+    "value": "מחק פרופיל",
+    "description": "טקסט כפתור למחיקת פרופיל"
+  },
+  "common.editTags": {
+    "description": "טקסט כפתור לעריכת תגיות באופן מרוכז",
+    "value": "ערוך תגיות"
   },
   "common.update": {
     "value": "עדכן",

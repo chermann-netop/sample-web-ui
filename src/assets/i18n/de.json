@@ -123,42 +123,6 @@
     "description": "Hinweis zur Verwendung von TLS",
     "value": "Verwenden Sie TLS."
   },
-  "addDevice.useCIRA": {
-    "description": "Kontrollkästchen für die Verwendung der CIRA-Verbindung",
-    "value": "CIRA verwenden"
-  },
-  "addDevice.guid": {
-    "description": "Bezeichnung für das GUID-Feld",
-    "value": "GUID"
-  },
-  "addDevice.enterGuid": {
-    "description": "Hinweis zur Eingabe der GUID",
-    "value": "GUID eingeben"
-  },
-  "addDevice.mpsUsername": {
-    "description": "Bezeichnung für das MPS-Benutzername-Feld",
-    "value": "MPS-Benutzername"
-  },
-  "addDevice.mpsUsernameHint": {
-    "description": "Hinweis für das MPS-Benutzername-Feld",
-    "value": "MPS-Benutzername (Standard: admin)"
-  },
-  "addDevice.mpsPassword": {
-    "description": "Bezeichnung für das MPS-Passwort-Feld",
-    "value": "MPS-Passwort"
-  },
-  "addDevice.mpsPasswordHint": {
-    "description": "Hinweis für das MPS-Passwort-Feld",
-    "value": "MPS-Passwort eingeben"
-  },
-  "addDevice.amtPassword": {
-    "description": "Bezeichnung für das AMT-Passwort-Feld",
-    "value": "AMT-Passwort"
-  },
-  "addDevice.amtPasswordHint": {
-    "description": "Hinweis für das AMT-Passwort-Feld",
-    "value": "AMT-Passwort eingeben"
-  },
   "alarm.errorAdding": {
     "description": "Fehler beim Hinzufügen",
     "value": "Fehler beim Hinzufügen von Alarmereignissen"
@@ -170,10 +134,6 @@
   "alarm.errorRetrieve": {
     "description": "Fehler beim Abrufen",
     "value": "Fehler beim Abrufen von Alarmereignissen"
-  },
-  "alarm.successAdding": {
-    "description": "Erfolgsmeldung beim Hinzufügen eines Alarms",
-    "value": "Alarm erfolgreich erstellt"
   },
   "alarmService.addNew": {
     "description": "Schaltflächentext zum Hinzufügen eines neuen Alarms",
@@ -287,22 +247,6 @@
   "certificates.errorRetrievingCertificates": {
     "description": "Fehler beim Abrufen der Zertifikatsinformationen",
     "value": "Fehler beim Abrufen der Zertifikatsinformationen"
-  },
-  "certificates.certificateReferencedError": {
-    "description": "Fehlermeldung, wenn ein Zertifikat nicht gelöscht werden kann, da es von Profilen referenziert wird",
-    "value": "Zertifikat kann nicht gelöscht werden, da es derzeit von AMT-Profilen referenziert wird. Entfernen Sie zuerst die Referenzen."
-  },
-  "certificates.certificateNotFoundError": {
-    "description": "Fehlermeldung, wenn das zu löschende Zertifikat nicht gefunden wird",
-    "value": "Zertifikat nicht gefunden oder bereits gelöscht"
-  },
-  "certificates.readOnlyCertificateError": {
-    "description": "Fehlermeldung beim Versuch, ein schreibgeschütztes Zertifikat zu löschen",
-    "value": "Schreibgeschütztes Zertifikat kann nicht gelöscht werden"
-  },
-  "certificates.deletedSuccessfully": {
-    "description": "Erfolgsmeldung, wenn ein Zertifikat gelöscht wurde",
-    "value": "Zertifikat '{{name}}' erfolgreich gelöscht"
   },
   "certificates.list": {
     "description": "Text für die Liste der Zertifikate",
@@ -518,7 +462,7 @@
   },
   "common.wired": {
     "description": "Text für die Schaltfläche „Wireless“",
-    "value": "Wired"
+    "value": "Verkabelt"
   },
   "common.wireless": {
     "description": "Text für kabelgebundenen Knopf",
@@ -567,9 +511,9 @@
     "description": "Platzhaltertext für das Feld „Port“",
     "value": "Port"
   },
-  "configDetail.generateRandomPassword": {
-    "description": "Text für die Option „Zufälliges Passwort generieren",
-    "value": "Zufälliges Passwort pro Gerät bei Geräteaktivierung generieren"
+  "configDetail.regeneratePassword": {
+    "description": "Text für die Option „Passwort neu generieren”",
+    "value": "Generieren Sie beim Speichern ein neues zufälliges Passwort."
   },
   "configDetail.usernameHint": {
     "description": "Hinweistext für das Feld „Benutzername”",
@@ -1061,6 +1005,18 @@
     "description": "Tabellen-Spaltenüberschrift für Tags",
     "value": "Tags"
   },
+  "deviceToolbar.power.on": {
+    "description": "Energie-Tooltip für Eingeschaltet",
+    "value": "Strom: Ein"
+  },
+  "deviceToolbar.power.sleep": {
+    "description": "Energie-Tooltip für Ruhezustand",
+    "value": "Strom: Ruhezustand"
+  },
+  "deviceToolbar.power.off": {
+    "description": "Energie-Tooltip für Ausgeschaltet",
+    "value": "Strom: Aus"
+  },
   "deviceUserConsent.description": {
     "description": "Beschreibung der Einwilligung des Benutzers für Geräte",
     "value": "Für den Zugriff auf das System ist ein von Intel AMT generierter Benutzerzustimmungscode erforderlich."
@@ -1373,7 +1329,7 @@
   },
   "general.amtTrustedDNSSuffix": {
     "description": "Bezeichnung für AMT Trusted DNS Suffix",
-    "value": "AMT Trusted DNS Suffix (MEBx):"
+    "value": "AMT-vertrauenswürdiger DNS-Suffix (MEBx):"
   },
   "general.amtVersion": {
     "description": "Bezeichnung für AMT-Version",
@@ -1466,14 +1422,6 @@
   "general.windowsRecoverySupported": {
     "description": "Tooltip für Windows-Wiederherstellung wird unterstützt",
     "value": "Windows Recovery wird unterstützt."
-  },
-  "general.redirectionWarning": {
-    "description": "Warnung, wenn Umleitung deaktiviert ist, aber KVM/SOL/IDER aktiviert ist",
-    "value": "Umleitung ist deaktiviert. KVM, SOL und IDER erfordern eine aktivierte Umleitung."
-  },
-  "general.redirectionEnable": {
-    "description": "Schaltflächenbeschriftung zum Aktivieren der Umleitung",
-    "value": "Aktivieren"
   },
   "httpBoot.enforce": {
     "value": "Sicheres Booten erzwingen"
@@ -1691,26 +1639,6 @@
   "kvm.stopIder.label": {
     "description": "Schaltflächenbeschriftung zum Beenden der IDER-Sitzung",
     "value": "Stop IDER"
-  },
-  "kvm.status.checkingPowerState": {
-    "description": "Statusmeldung beim Überprüfen des Energiestatus",
-    "value": "Energiestatus wird überprüft..."
-  },
-  "kvm.status.checkingRedirection": {
-    "description": "Statusmeldung beim Überprüfen des Umleitungsstatus",
-    "value": "Umleitungsstatus wird überprüft..."
-  },
-  "kvm.status.checkingAMTFeatures": {
-    "description": "Statusmeldung beim Abrufen der AMT-Funktionen",
-    "value": "AMT-Funktionen werden abgerufen..."
-  },
-  "kvm.status.checkingConsent": {
-    "description": "Statusmeldung beim Überprüfen der Benutzerzustimmung",
-    "value": "Zustimmungsmodus wird überprüft..."
-  },
-  "kvm.status.connectingKVM": {
-    "description": "Statusmeldung während der KVM-Verbindungsherstellung",
-    "value": "Verbindung zu KVM wird hergestellt..."
   },
   "kvm.title": {
     "description": "Titel für KVM",
@@ -2029,7 +1957,7 @@
     "value": "Boot-Dateipfad"
   },
   "powerOptions.hibernate": {
-    "value": "Hibernate"
+    "value": "Winterschlaf"
   },
   "powerOptions.off": {
     "value": "Aus"
@@ -2038,13 +1966,13 @@
     "value": "Auf"
   },
   "powerOptions.powerCycle": {
-    "value": "Power Cycle"
+    "value": "Stromzyklus"
   },
   "powerOptions.powerUpToBIOS": {
     "value": "Power Up zum BIOS"
   },
   "powerOptions.powerUpToHTTPSBoot": {
-    "value": "Power Up to HTTPS Boot (OCR)"
+    "value": "Power Up zu HTTPS-Boot (OCR)"
   },
   "powerOptions.powerUpToPXE": {
     "value": "Power Up zu PXE"
@@ -2673,10 +2601,6 @@
     "value": "Ziehen und ablegen, um die Reihenfolge zu ändern",
     "description": "Hinweis für das Neuanordnen per Drag-and-Drop"
   },
-  "proxy.removeButton.ariaLabel": {
-    "value": "Proxy-Profil entfernen",
-    "description": "Aria-Label für die Schaltfläche zum Entfernen des Proxy-Profils"
-  },
   "profileDetail.noProxy": {
     "description": "Meldung, wenn keine Proxy-Konfigurationen verfügbar sind",
     "value": "Keine Proxy-Konfigurationen gefunden"
@@ -2780,6 +2704,14 @@
   "common.delete": {
     "value": "Löschen",
     "description": "Text für die Schaltfläche Löschen"
+  },
+  "common.deleteProfile": {
+    "value": "Profil löschen",
+    "description": "Text der Schaltfläche zum Löschen des Profils"
+  },
+  "common.editTags": {
+    "description": "Schaltflächentext zum Bearbeiten von Tags in Massenaktion",
+    "value": "Tags bearbeiten"
   },
   "common.update": {
     "value": "AKTUALISIEREN",

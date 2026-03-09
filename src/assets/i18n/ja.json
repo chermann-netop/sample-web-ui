@@ -1,4 +1,4 @@
-{
+﻿{
   "about.cloudMode": {
     "description": "クラウドモードにおける「about」セクションのタイトル",
     "value": "デバイス管理ツールキット サンプルWeb UIについて"
@@ -123,42 +123,6 @@
     "description": "TLS ご利用に関するご案内",
     "value": "TLSを使用してください"
   },
-  "addDevice.useCIRA": {
-    "description": "CIRA接続を使用するチェックボックス",
-    "value": "CIRAを使用"
-  },
-  "addDevice.guid": {
-    "description": "GUIDフィールドのラベル",
-    "value": "GUID"
-  },
-  "addDevice.enterGuid": {
-    "description": "GUIDを入力するヒント",
-    "value": "GUIDを入力"
-  },
-  "addDevice.mpsUsername": {
-    "description": "MPSユーザー名フィールドのラベル",
-    "value": "MPSユーザー名"
-  },
-  "addDevice.mpsUsernameHint": {
-    "description": "MPSユーザー名フィールドのヒント",
-    "value": "MPSユーザー名（デフォルト: admin）"
-  },
-  "addDevice.mpsPassword": {
-    "description": "MPSパスワードフィールドのラベル",
-    "value": "MPSパスワード"
-  },
-  "addDevice.mpsPasswordHint": {
-    "description": "MPSパスワードフィールドのヒント",
-    "value": "MPSパスワードを入力"
-  },
-  "addDevice.amtPassword": {
-    "description": "AMTパスワードフィールドのラベル",
-    "value": "AMTパスワード"
-  },
-  "addDevice.amtPasswordHint": {
-    "description": "AMTパスワードフィールドのヒント",
-    "value": "AMTパスワードを入力"
-  },
   "alarm.errorAdding": {
     "description": "エラーの追加について",
     "value": "アラーム発生の追加に失敗しました"
@@ -170,10 +134,6 @@
   "alarm.errorRetrieve": {
     "description": "取得エラー",
     "value": "アラーム発生の取得に失敗しました"
-  },
-  "alarm.successAdding": {
-    "description": "アラーム追加の成功メッセージ",
-    "value": "アラームが正常に作成されました"
   },
   "alarmService.addNew": {
     "description": "新しいアラームを追加するボタンテキスト",
@@ -287,22 +247,6 @@
   "certificates.errorRetrievingCertificates": {
     "description": "証明書情報の取得エラー",
     "value": "証明書情報の取得に失敗しました"
-  },
-  "certificates.certificateReferencedError": {
-    "description": "プロファイルから参照されているため証明書を削除できないエラー",
-    "value": "証明書は現在AMTプロファイルから参照されているため削除できません。まず参照を削除してください。"
-  },
-  "certificates.certificateNotFoundError": {
-    "description": "削除する証明書が見つからないエラー",
-    "value": "証明書が見つからないか、既に削除されています"
-  },
-  "certificates.readOnlyCertificateError": {
-    "description": "読み取り専用証明書を削除しようとしたときのエラー",
-    "value": "読み取り専用証明書は削除できません"
-  },
-  "certificates.deletedSuccessfully": {
-    "description": "証明書が削除されたときの成功メッセージ",
-    "value": "証明書 '{{name}}' を正常に削除しました"
   },
   "certificates.list": {
     "description": "証明書一覧のテキスト",
@@ -518,7 +462,7 @@
   },
   "common.wired": {
     "description": "ワイヤレスボタン用テキスト",
-    "value": "Wired"
+    "value": "ワイアード"
   },
   "common.wireless": {
     "description": "配線済みボタンのテキスト",
@@ -567,9 +511,9 @@
     "description": "ポートフィールド用プレースホルダーテキスト",
     "value": "ポート"
   },
-  "configDetail.generateRandomPassword": {
-    "description": "ランダムパスワード生成トグルのテキスト",
-    "value": "デバイスのアクティベーション時にデバイスごとにランダムパスワードを生成"
+  "configDetail.regeneratePassword": {
+    "description": "パスワード再発行トグルのテキスト",
+    "value": "保存時に新しいランダムパスワードを生成する"
   },
   "configDetail.usernameHint": {
     "description": "ユーザー名フィールドのヒントテキスト",
@@ -1061,6 +1005,18 @@
     "description": "タグ用テーブル列ヘッダー",
     "value": "タグ"
   },
+  "deviceToolbar.power.on": {
+    "description": "電源オンのツールチップ",
+    "value": "電源: オン"
+  },
+  "deviceToolbar.power.sleep": {
+    "description": "スリープ状態のツールチップ",
+    "value": "電源: スリープ"
+  },
+  "deviceToolbar.power.off": {
+    "description": "電源オフのツールチップ",
+    "value": "電源: オフ"
+  },
   "deviceUserConsent.description": {
     "description": "デバイスに関するユーザー同意の説明",
     "value": "システムにアクセスするには、Intel AMTによって生成されたユーザー同意コードが必要となります。"
@@ -1467,14 +1423,6 @@
     "description": "Windows リカバリのツールチップがサポートされています",
     "value": "Windows Recovery はサポートされています"
   },
-  "general.redirectionWarning": {
-    "description": "リダイレクトが無効でKVM/SOL/IDERが有効な場合の警告",
-    "value": "リダイレクトが無効です。KVM、SOL、IDERにはリダイレクトの有効化が必要です。"
-  },
-  "general.redirectionEnable": {
-    "description": "リダイレクトを有効にするボタンラベル",
-    "value": "有効にする"
-  },
   "httpBoot.enforce": {
     "value": "セキュアブートの実施"
   },
@@ -1690,27 +1638,7 @@
   },
   "kvm.stopIder.label": {
     "description": "IDERセッションを停止するボタンラベル",
-    "value": "Stop IDER"
-  },
-  "kvm.status.checkingPowerState": {
-    "description": "電源状態の確認中に表示されるステータスメッセージ",
-    "value": "電源状態を確認しています..."
-  },
-  "kvm.status.checkingRedirection": {
-    "description": "リダイレクト状態の確認中に表示されるステータスメッセージ",
-    "value": "リダイレクト状態を確認しています..."
-  },
-  "kvm.status.checkingAMTFeatures": {
-    "description": "AMT機能の取得中に表示されるステータスメッセージ",
-    "value": "AMT機能を取得しています..."
-  },
-  "kvm.status.checkingConsent": {
-    "description": "ユーザーの同意確認中に表示されるステータスメッセージ",
-    "value": "同意モードを確認しています..."
-  },
-  "kvm.status.connectingKVM": {
-    "description": "KVMコンポーネントの接続中に表示されるステータスメッセージ",
-    "value": "KVMに接続しています..."
+    "value": "ストップ・アイダー"
   },
   "kvm.title": {
     "description": "KVMのタイトル",
@@ -1726,7 +1654,7 @@
   },
   "mqttEvents.connect": {
     "description": "MQTTの接続ボタンテキスト",
-    "value": "Connect"
+    "value": "接続"
   },
   "mqttEvents.connected": {
     "description": "MQTT接続が成功した際のツールチップテキスト",
@@ -2029,7 +1957,7 @@
     "value": "ブートファイルのパス"
   },
   "powerOptions.hibernate": {
-    "value": "Hibernate"
+    "value": "冬眠"
   },
   "powerOptions.off": {
     "value": "オフ"
@@ -2673,10 +2601,6 @@
     "value": "ドラッグ＆ドロップで順序を変更",
     "description": "ドラッグアンドドロップによる並び替えのヒント"
   },
-  "proxy.removeButton.ariaLabel": {
-    "value": "プロキシプロファイルを削除",
-    "description": "プロキシプロファイル削除ボタンのAriaラベル"
-  },
   "profileDetail.noProxy": {
     "description": "利用可能なプロキシ設定がない場合のメッセージ",
     "value": "プロキシ設定が見つかりません"
@@ -2780,6 +2704,14 @@
   "common.delete": {
     "value": "削除",
     "description": "削除ボタンのテキスト"
+  },
+  "common.deleteProfile": {
+    "value": "プロフィールを削除",
+    "description": "プロフィール削除ボタンのテキスト"
+  },
+  "common.editTags": {
+    "description": "タグを一括編集するためのボタンテキスト",
+    "value": "タグを編集"
   },
   "common.update": {
     "value": "更新",
